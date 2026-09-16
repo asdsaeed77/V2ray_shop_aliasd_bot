@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: v2ray-shop-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python v2ray_shop_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: WEBHOOK_BASE_URL
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: CARD_NUMBER
+        sync: false
+      - key: CARD_OWNER
+        sync: false
+      - key: SHOP_NAME
+        value: "✨ V2RAY SHOP BOT"
+      - key: CURRENCY
+        value: "تومان"
+      - key: REFERRAL_REWARD
+        value: "20000"
+      - key: SEED_DEMO
+        value: "0"
+      - key: LOG_LEVEL
+        value: "INFO"
